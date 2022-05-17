@@ -15,6 +15,7 @@ class ModeloSerializer(serializers.ModelSerializer):
         model = Modelo
         fields = '__all__'
 
+
 class CarroSerializer(serializers.ModelSerializer):
 
     class Meta:
@@ -22,8 +23,8 @@ class CarroSerializer(serializers.ModelSerializer):
         exclude=[]
 
 
-
 class ListaCarroSerializer(serializers.ModelSerializer):
+
     marca_nome = serializers.ReadOnlyField(source='marca.nome_marca')
     modelo_nome = serializers.ReadOnlyField(source='modelo.nome')
     valor_fipe = serializers.ReadOnlyField(source='modelo.valor_fipe')

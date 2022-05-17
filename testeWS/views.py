@@ -11,9 +11,11 @@ class ModeloViewset(viewsets.ModelViewSet):
     queryset = Modelo.objects.all()
     serializer_class = ModeloSerializer
 
+
 class CarroViewset(viewsets.ModelViewSet):
     queryset = Carro.objects.all()
     serializer_class = CarroSerializer
+
 
 class ListaCarros(generics.ListAPIView):
     queryset = Carro.objects.all()
